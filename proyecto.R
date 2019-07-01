@@ -14,15 +14,16 @@ ggcorrplot(cormat, hc.order = TRUE, type = "lower",
            lab = TRUE)
 
 lm.fit <- lm(Chance.of.Admit~TOEFL.Score+GRE.Score+CGPA, data = train_data)
-summary(lm.fit)
+lm2.fit <- lm(Chance.of.Admit~TOEFL.Score+GRE.Score+CGPA+LOR^2+Research^3, data = train_data)
+summary(lm2.fit)
 
-names(test_data)
-names(train_data)
+pred_lm <- predict(lm2.fit,test_data)
 submission <- test_data %>% select(id)
-submission$`Chance of Admit`<- runif(nrow(test_data))
-write_csv(submission, "sub1.csv")
-
-pred_lm <- predict(lm.fit,test_data)
-submission <- test_data %>% select(id)
+head(submission)
 submission$`Chance of Admit`<- pred_lm
-write_csv(submission, "sub2.csv")
+head(submission)
+
+df <- data.frame(submission$id, submission$`Chance of Admit`)
+colnames(df) <- c("id", "Chance of Admit")
+head(df)
+write.csv(df, "./Galileo/Econometria/Proyecto/sub2.csv",row.names=FALSE)
