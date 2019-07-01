@@ -1,0 +1,17 @@
+---
+title: "Proyecto"
+output: html_notebook
+---
+
+### Alan Hurtarte
+#### 19000590
+
+---
+
+# Datos
+|Formula  |R^2    |Kaggle   |File|
+|---------|-------|---------|---|
+|Chance.of.Admit~TOEFL.Score+GRE.Score+CGPA|0.767|0.06590|sub2.csv|
+|Chance.of.Admit~TOEFL.Score+GRE.Score+CGPA+LOR^2 +Research^3|0.8176|0.06352|sub1.csv|
+|Chance.of.Admit~TOEFL.Score+GRE.Score+CGPA+LOR^3 +Research^4|0.8176|N.A.|sub3.csv|
+|Chance.of.Admit~TOEFL.Score^3 +GRE.Score+CGPA+LOR+Research^3|0.8176|N.A.|sub3.csv|
