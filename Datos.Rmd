@@ -15,3 +15,4 @@ output: html_notebook
 |Chance.of.Admit~TOEFL.Score+GRE.Score+CGPA+LOR^2 +Research^3|0.8176|0.06352|sub1.csv|
 |Chance.of.Admit~TOEFL.Score+GRE.Score+CGPA+LOR^3 +Research^4|0.8176|N.A.|sub3.csv|
 |Chance.of.Admit~TOEFL.Score^3 +GRE.Score+CGPA+LOR+Research^3|0.8176|N.A.|sub3.csv|
+|Chance.of.Admit~TOEFL.Score^2+GRE.Score+CGPA|0.7989|N.A.||
